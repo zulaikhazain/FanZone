@@ -9,102 +9,133 @@ export interface Match {
   date: string;
   time: string;
   status: "upcoming" | "finished";
+  stadium: string;
+  city: string;
+  referee: string;
+  homeLineup: string[];
+  awayLineup: string[];
+  weather: string;
+  temperature: string;
 }
 
 export const matches: Match[] = [
-  // Group A
-  { id: 1, homeTeam: "Mexico", awayTeam: "South Africa", homeScore: null, awayScore: null, group: "A", day: "Friday", date: "2026-06-12", time: "03:00", status: "upcoming" },
-  { id: 2, homeTeam: "South Korea", awayTeam: "Czechia", homeScore: null, awayScore: null, group: "A", day: "Friday", date: "2026-06-12", time: "10:00", status: "upcoming" },
-  { id: 3, homeTeam: "Chezia", awayTeam: "South Africa", homeScore: null, awayScore: null, group: "A", day: "Friday", date: "2026-06-19", time: "12:00", status: "upcoming" },
-  { id: 4, homeTeam: "Mexico", awayTeam: "South Korea", homeScore: null, awayScore: null, group: "A", day: "Friday", date: "2026-06-19", time: "09:00", status: "upcoming" },
-  { id: 5, homeTeam: "South Africa", awayTeam: "South Korea", homeScore: null, awayScore: null, group: "A", day: "Thursday", date: "2026-06-25", time: "09:00", status: "upcoming" },
-  { id: 6, homeTeam: "Czechia", awayTeam: "Mexico", homeScore: null, awayScore: null, group: "A", day: "Thursday", date: "2026-06-25", time: "09:00", status: "upcoming" },
+  // Group A - Opening match
+  { 
+    id: 1, homeTeam: "Mexico", awayTeam: "South Africa", homeScore: null, awayScore: null, 
+    group: "A", day: "Friday", date: "2026-06-12", time: "03:00", status: "upcoming",
+    stadium: "Estadio Azteca", city: "Mexico City", referee: "Daniele Orsato (Italy)",
+    homeLineup: ["Ochoa", "Montes", "Vasquez", "Gallardo", "Sanchez", "Alvarez", "Chavez", "Pineda", "Lozano", "Martin", "Jimenez"],
+    awayLineup: ["Williams", "Mvala", "Xoki", "Modiba", "Kekana", "Mokoena", "Sithole", "Zungu", "Mosele", "Lekganyane", "Makgopa"],
+    weather: "Clear sky", temperature: "22°C"
+  },
 
-  // Group B
-  { id: 7, homeTeam: "Canada", awayTeam: "Bosnia and Herzegovina", homeScore: null, awayScore: null, group: "B", day: "Saturday", date: "2026-06-13", time: "03:00", status: "upcoming" },
-  { id: 8, homeTeam: "Qatar", awayTeam: "Switzerland", homeScore: null, awayScore: null, group: "B", day: "Sunday", date: "2026-06-14", time: "03:00", status: "upcoming" },
-  { id: 9, homeTeam: "Switzerland", awayTeam: "Bosnia and Herzegovina", homeScore: null, awayScore: null, group: "B", day: "Friday", date: "2026-06-19", time: "03:00", status: "upcoming" },
-  { id: 10, homeTeam: "Canada", awayTeam: "Qatar", homeScore: null, awayScore: null, group: "B", day: "Friday", date: "2026-06-19", time: "06:00", status: "upcoming" },
-  { id: 11, homeTeam: "Switzerland", awayTeam: "Canada", homeScore: null, awayScore: null, group: "B", day: "Thursday", date: "2026-06-25", time: "03:00", status: "upcoming" },
-  { id: 12, homeTeam: "Bosnia and Herzegovina", awayTeam: "Qatar", homeScore: null, awayScore: null, group: "B", day: "Thursday", date: "2026-06-25", time: "03:00", status: "upcoming" },
+  // Group B - Day 2
+  { 
+    id: 2, homeTeam: "Canada", awayTeam: "Bosnia and Herzegovina", homeScore: null, awayScore: null, 
+    group: "B", day: "Saturday", date: "2026-06-13", time: "03:00", status: "upcoming",
+    stadium: "BMO Field", city: "Toronto", referee: "Clement Turpin (France)",
+    homeLineup: ["Borjan", "Johnston", "Vitoria", "Miller", "Laryea", "Eustaquio", "Hutchinson", "Buchanan", "David", "Larin", "Davies"],
+    awayLineup: ["Sehic", "Hadzikadunic", "Sanicanin", "Kolasinac", "Dedic", "Pjanic", "Cimirot", "Tatar", "Demirovic", "Dzeko", "Prevljak"],
+    weather: "Sunny", temperature: "24°C"
+  },
 
-  // Group C
-  { id: 13, homeTeam: "Brazil", awayTeam: "Morocco", homeScore: null, awayScore: null, group: "C", day: "Sunday", date: "2026-06-14", time: "06:00", status: "upcoming" },
-  { id: 14, homeTeam: "Haiti", awayTeam: "Scotland", homeScore: null, awayScore: null, group: "C", day: "Sunday", date: "2026-06-14", time: "09:00", status: "upcoming" },
-  { id: 15, homeTeam: "Scotland", awayTeam: "Morocco", homeScore: null, awayScore: null, group: "C", day: "Saturday", date: "2026-06-20", time: "06:00", status: "upcoming" },
-  { id: 16, homeTeam: "Brazil", awayTeam: "Haiti", homeScore: null, awayScore: null, group: "C", day: "Saturday", date: "2026-06-20", time: "08:30", status: "upcoming" },
-  { id: 17, homeTeam: "Morocco", awayTeam: "Haiti", homeScore: null, awayScore: null, group: "C", day: "Thursday", date: "2026-06-25", time: "06:00", status: "upcoming" },
-  { id: 18, homeTeam: "Scotland", awayTeam: "Brazil", homeScore: null, awayScore: null, group: "C", day: "Thursday", date: "2026-06-25", time: "06:00", status: "upcoming" },
+  // Group C - Day 3
+  { 
+    id: 3, homeTeam: "Brazil", awayTeam: "Morocco", homeScore: null, awayScore: null, 
+    group: "C", day: "Sunday", date: "2026-06-14", time: "06:00", status: "upcoming",
+    stadium: "Estadio do Maracana", city: "Rio de Janeiro", referee: "Felix Zwayer (Germany)",
+    homeLineup: ["Alisson", "Danilo", "Marquinhos", "Militão", "Lodi", "Casemiro", "Paquetá", "Vinicius Jr", "Rodrygo", "Neymar", "Richarlison"],
+    awayLineup: ["Bounou", "Hakimi", "Aguerd", "Saiss", "Mazraoui", "Amrabat", "Ounahi", "Ziyech", "Ezzalzouli", "En-Nesyri", "Boufal"],
+    weather: "Partly cloudy", temperature: "25°C"
+  },
 
-  // Group D
-  { id: 19, homeTeam: "USA", awayTeam: "Paraguay", homeScore: null, awayScore: null, group: "D", day: "Saturday", date: "2026-06-13", time: "09:00", status: "upcoming" },
-  { id: 20, homeTeam: "Australia", awayTeam: "Turkiye", homeScore: null, awayScore: null, group: "D", day: "Sunday", date: "2026-06-14", time: "12:00", status: "upcoming" },
-  { id: 21, homeTeam: "USA", awayTeam: "Australia", homeScore: null, awayScore: null, group: "D", day: "Saturday", date: "2026-06-20", time: "03:00", status: "upcoming" },
-  { id: 22, homeTeam: "Turkiye", awayTeam: "Paraguay", homeScore: null, awayScore: null, group: "D", day: "Saturday", date: "2026-06-20", time: "11:00", status: "upcoming" },
-  { id: 23, homeTeam: "Turkiye", awayTeam: "USA", homeScore: null, awayScore: null, group: "D", day: "Friday", date: "2026-06-26", time: "10:00", status: "upcoming" },
-  { id: 24, homeTeam: "Paraguay", awayTeam: "Australia", homeScore: null, awayScore: null, group: "D", day: "Friday", date: "2026-06-26", time: "10:00", status: "upcoming" },
+  // Group D - Day 4
+  { 
+    id: 4, homeTeam: "USA", awayTeam: "Paraguay", homeScore: null, awayScore: null, 
+    group: "D", day: "Saturday", date: "2026-06-13", time: "09:00", status: "upcoming",
+    stadium: "MetLife Stadium", city: "New Jersey", referee: "Benoit Bastien (France)",
+    homeLineup: ["Turner", "Dest", "Zimmerman", "Richards", "Robinson", "Adams", "McKennie", "Musah", "Pulisic", "Weah", "Balogun"],
+    awayLineup: ["Silva", "Rojas", "Gomez", "Alonso", "Espinoza", "Villalba", "Sanchez", "Romero", "Almiron", "Gonzalez", "Enciso"],
+    weather: "Clear sky", temperature: "28°C"
+  },
 
-  // Group E
-  { id: 25, homeTeam: "Germany", awayTeam: "Curacao", homeScore: null, awayScore: null, group: "E", day: "Monday", date: "2026-06-15", time: "01:00", status: "upcoming" },
-  { id: 26, homeTeam: "Ivory Coast", awayTeam: "Ecuador", homeScore: null, awayScore: null, group: "E", day: "Monday", date: "2026-06-15", time: "07:00", status: "upcoming" },
-  { id: 27, homeTeam: "Germany", awayTeam: "Ivory Coast", homeScore: null, awayScore: null, group: "E", day: "Sunday", date: "2026-06-21", time: "04:00", status: "upcoming" },
-  { id: 28, homeTeam: "Ecuador", awayTeam: "Curacao", homeScore: null, awayScore: null, group: "E", day: "Sunday", date: "2026-06-21", time: "08:00", status: "upcoming" },
-  { id: 29, homeTeam: "Curacao", awayTeam: "Ivory Coast", homeScore: null, awayScore: null, group: "E", day: "Friday", date: "2026-06-26", time: "04:00", status: "upcoming" },
-  { id: 30, homeTeam: "Ecuador", awayTeam: "Germany", homeScore: null, awayScore: null, group: "E", day: "Friday", date: "2026-06-26", time: "04:00", status: "upcoming" },
+  // Group E - Day 5
+  { 
+    id: 5, homeTeam: "Germany", awayTeam: "Curacao", homeScore: null, awayScore: null, 
+    group: "E", day: "Monday", date: "2026-06-15", time: "01:00", status: "upcoming",
+    stadium: "Allianz Arena", city: "Munich", referee: "Anthony Taylor (England)",
+    homeLineup: ["Neuer", "Kimmich", "Rudiger", "Schlotterbeck", "Raum", "Gundogan", "Musiala", "Sane", "Wirtz", "Muller", "Fullkrug"],
+    awayLineup: ["Room", "Martina", "Van Eijma", "Gaari", "Janga", "Bacuna", "Kuwas", "Gorré", "Antonia", "Janga", "Hooi"],
+    weather: "Clear", temperature: "20°C"
+  },
 
-  // Group F
-  { id: 31, homeTeam: "Netherlands", awayTeam: "Japan", homeScore: null, awayScore: null, group: "F", day: "Monday", date: "2026-06-15", time: "04:00", status: "upcoming" },
-  { id: 32, homeTeam: "Sweden", awayTeam: "Tunisia", homeScore: null, awayScore: null, group: "F", day: "Monday", date: "2026-06-15", time: "10:00", status: "upcoming" },
-  { id: 33, homeTeam: "Netherlands", awayTeam: "Sweden", homeScore: null, awayScore: null, group: "F", day: "Sunday", date: "2026-06-21", time: "04:00", status: "upcoming" },
-  { id: 34, homeTeam: "Tunisia", awayTeam: "Japan", homeScore: null, awayScore: null, group: "F", day: "Sunday", date: "2026-06-21", time: "12:00", status: "upcoming" },
-  { id: 35, homeTeam: "Tunisia", awayTeam: "Netherlands", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" },
-  { id: 36, homeTeam: "Japan", awayTeam: "Sweden", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" },
+  // Group F - Day 6
+  { 
+    id: 6, homeTeam: "Netherlands", awayTeam: "Japan", homeScore: null, awayScore: null, 
+    group: "F", day: "Monday", date: "2026-06-15", time: "04:00", status: "upcoming",
+    stadium: "Johan Cruijff Arena", city: "Amsterdam", referee: "Szymon Marciniak (Poland)",
+    homeLineup: ["Flekken", "Dumfries", "Van Dijk", "Ake", "Blind", "De Jong", "Koopmeiners", "Berghuis", "Gakpo", "Depay", "Weghorst"],
+    awayLineup: ["Gonda", "Itakura", "Yoshida", "Taniguchi", "Nagatomo", "Endo", "Morita", "Kamada", "Doan", "Minamino", "Asano"],
+    weather: "Cloudy", temperature: "18°C"
+  },
 
-  // Group G
-  { id: 37, homeTeam: "Belgium", awayTeam: "Egypt", homeScore: null, awayScore: null, group: "G", day: "Tuesday", date: "2026-06-16", time: "03:00", status: "upcoming" },
-  { id: 38, homeTeam: "Iran", awayTeam: "New Zealand", homeScore: null, awayScore: null, group: "G", day: "Tuesday", date: "2026-06-16", time: "09:00", status: "upcoming" },
-  { id: 39, homeTeam: "Belgium", awayTeam: "Iran", homeScore: null, awayScore: null, group: "G", day: "Monday", date: "2026-06-22", time: "03:00", status: "upcoming" },
-  { id: 40, homeTeam: "New Zealand", awayTeam: "Egypt", homeScore: null, awayScore: null, group: "G", day: "Monday", date: "2026-06-22", time: "09:00", status: "upcoming" },
-  { id: 41, homeTeam: "New Zealand", awayTeam: "Belgium", homeScore: null, awayScore: null, group: "G", day: "Saturday", date: "2026-06-27", time: "11:00", status: "upcoming" },
-  { id: 42, homeTeam: "Egypt", awayTeam: "Iran", homeScore: null, awayScore: null, group: "G", day: "Saturday", date: "2026-06-27", time: "11:00", status: "upcoming" },
+  // Group G - Day 7
+  { 
+    id: 7, homeTeam: "Belgium", awayTeam: "Egypt", homeScore: null, awayScore: null, 
+    group: "G", day: "Tuesday", date: "2026-06-16", time: "03:00", status: "upcoming",
+    stadium: "King Baudouin Stadium", city: "Brussels", referee: "Wilmar Roldan (Colombia)",
+    homeLineup: ["Courtois", "Castagne", "Vertonghen", "Faes", "Theate", "Tielemans", "Onana", "De Bruyne", "Trossard", "Lukaku", "Doku"],
+    awayLineup: ["El Shenawy", "Hany", "Abdelmonem", "Ibrahim", "Fatouh", "Fathi", "El Soulia", "Zizo", "Salah", "Marmoush", "Trezege"],
+    weather: "Sunny", temperature: "22°C"
+  },
 
-  // Group H
-  { id: 43, homeTeam: "Spain", awayTeam: "Cape Verde", homeScore: null, awayScore: null, group: "H", day: "Tuesday", date: "2026-06-16", time: "12:00", status: "upcoming" },
-  { id: 44, homeTeam: "Saudi Arabia", awayTeam: "Uruguay", homeScore: null, awayScore: null, group: "H", day: "Tuesday", date: "2026-06-16", time: "06:00", status: "upcoming" },
-  { id: 45, homeTeam: "Spain", awayTeam: "Saudi Arabia", homeScore: null, awayScore: null, group: "H", day: "Monday", date: "2026-06-22", time: "06:00", status: "upcoming" },
-  { id: 46, homeTeam: "Uruguay", awayTeam: "Cape Verde", homeScore: null, awayScore: null, group: "H", day: "Tuesday", date: "2026-06-22", time: "06:00", status: "upcoming" },
-  { id: 47, homeTeam: "Cape verde", awayTeam: "Saudi Arabia", homeScore: null, awayScore: null, group: "H", day: "Saturday", date: "2026-06-27", time: "08:00", status: "upcoming" },
-  { id: 48, homeTeam: "Uruguay", awayTeam: "Spain", homeScore: null, awayScore: null, group: "H", day: "Saturday", date: "2026-06-27", time: "08:00", status: "upcoming" },
+  // Group H - Day 8
+  { 
+    id: 8, homeTeam: "Spain", awayTeam: "Cape Verde", homeScore: null, awayScore: null, 
+    group: "H", day: "Tuesday", date: "2026-06-16", time: "12:00", status: "upcoming",
+    stadium: "Camp Nou", city: "Barcelona", referee: "Victor Gomes (South Africa)",
+    homeLineup: ["Simon", "Carvajal", "Laporte", "Torres", "Gaya", "Rodri", "Pedri", "Gavi", "Olmo", "Morata", "Asensio"],
+    awayLineup: ["Vozinha", "Stopira", "Lopes", "Fernandes", "Furtado", "Andrade", "Monteiro", "Teixeira", "Mendes", "Rodrigues", "Tavares"],
+    weather: "Sunny", temperature: "26°C"
+  },
 
-  // Group I
-  { id: 49, homeTeam: "France", awayTeam: "Senegal", homeScore: null, awayScore: null, group: "I", day: "Wednesday", date: "2026-06-17", time: "03:00", status: "upcoming" },
-  { id: 50, homeTeam: "Iraq", awayTeam: "Norway", homeScore: null, awayScore: null, group: "I", day: "Wednesday", date: "2026-06-17", time: "06:00", status: "upcoming" },
-  { id: 51, homeTeam: "France", awayTeam: "Iraq", homeScore: null, awayScore: null, group: "I", day: "Tuesday", date: "2026-06-23", time: "05:00", status: "upcoming" },
-  { id: 52, homeTeam: "Norway", awayTeam: "Senegal", homeScore: null, awayScore: null, group: "I", day: "Tuesday", date: "2026-06-23", time: "08:00", status: "upcoming" },
-  { id: 53, homeTeam: "Norway", awayTeam: "France", homeScore: null, awayScore: null, group: "I", day: "Saturday", date: "2026-06-27", time: "03:00", status: "upcoming" },
-  { id: 54, homeTeam: "Senegal", awayTeam: "Iraq", homeScore: null, awayScore: null, group: "I", day: "Saturday", date: "2026-06-23", time: "03:00", status: "upcoming" },
-  
-  // Group J
-  { id: 55, homeTeam: "Argentina", awayTeam: "Algeria", homeScore: null, awayScore: null, group: "J", day: "Wednesday", date: "2026-06-17", time: "09:00", status: "upcoming" },
-  { id: 56, homeTeam: "Austria", awayTeam: "Jordan", homeScore: null, awayScore: null, group: "J", day: "Wednesday", date: "2026-06-17", time: "12:00", status: "upcoming" },
-  { id: 57, homeTeam: "Argentina", awayTeam: "Austria", homeScore: null, awayScore: null, group: "J", day: "Tuesday", date: "2026-06-23", time: "0:00", status: "upcoming" },
-  { id: 58, homeTeam: "Jordan", awayTeam: "Algeria", homeScore: null, awayScore: null, group: "J", day: "Tuesday", date: "2026-06-23", time: "11:00", status: "upcoming" },
-  { id: 59, homeTeam: "Algeria", awayTeam: "Austria", homeScore: null, awayScore: null, group: "J", day: "Sunday", date: "2026-06-28", time: "10:00", status: "upcoming" },
-  { id: 60, homeTeam: "Jordan", awayTeam: "Argentina", homeScore: null, awayScore: null, group: "J", day: "Sunday", date: "2026-06-28", time: "10:00", status: "upcoming" },
+  // Group I - Day 9
+  { 
+    id: 9, homeTeam: "France", awayTeam: "Senegal", homeScore: null, awayScore: null, 
+    group: "I", day: "Wednesday", date: "2026-06-17", time: "03:00", status: "upcoming",
+    stadium: "Stade de France", city: "Paris", referee: "Ivan Barton (El Salvador)",
+    homeLineup: ["Lloris", "Kounde", "Varane", "Upamecano", "Hernandez", "Tchouameni", "Rabiot", "Coman", "Griezmann", "Mbappe", "Giroud"],
+    awayLineup: ["Mendy", "Sabaly", "Koulibaly", "Diallo", "Ciss", "Gueye", "Mendy", "Sarr", "Mane", "Dia", "Jackson"],
+    weather: "Light rain", temperature: "16°C"
+  },
 
-  // Group K
-  { id: 61, homeTeam: "Portugal", awayTeam: "DR Congo", homeScore: null, awayScore: null, group: "K", day: "Thursday", date: "2026-06-18", time: "01:00", status: "upcoming" },
-  { id: 62, homeTeam: "Uzbekistan", awayTeam: "Colombia", homeScore: null, awayScore: null, group: "K", day: "Thursday", date: "2026-06-18", time: "10:00", status: "upcoming" },
-  { id: 63, homeTeam: "Portugal", awayTeam: "Uzbekistan", homeScore: null, awayScore: null, group: "K", day: "Wednesday", date: "2026-06-24", time: "01:00", status: "upcoming" },
-  { id: 64, homeTeam: "Colombia", awayTeam: "DR Congo", homeScore: null, awayScore: null, group: "K", day: "Wednesday", date: "2026-06-24", time: "10:00", status: "upcoming" },
-  { id: 65, homeTeam: "Colombia", awayTeam: "Portugal", homeScore: null, awayScore: null, group: "K", day: "Sunday", date: "2026-06-28", time: "07:30", status: "upcoming" },
-  { id: 66, homeTeam: "DR Congo", awayTeam: "Uzbekistan", homeScore: null, awayScore: null, group: "K", day: "Sunday", date: "2026-06-28", time: "07:30", status: "upcoming" },
+  // Group J - Day 10
+  { 
+    id: 10, homeTeam: "Argentina", awayTeam: "Algeria", homeScore: null, awayScore: null, 
+    group: "J", day: "Wednesday", date: "2026-06-17", time: "09:00", status: "upcoming",
+    stadium: "Estadio Monumental", city: "Buenos Aires", referee: "Raphael Claus (Brazil)",
+    homeLineup: ["Martinez", "Molina", "Romero", "Otamendi", "Acuna", "De Paul", "Paredes", "Fernandez", "Messi", "Alvarez", "Di Maria"],
+    awayLineup: ["Mandrea", "Atal", "Mandi", "Touba", "Zeffane", "Bennacer", "Zerrouki", "Mahrez", "Belaili", "Slimani", "Bounedjah"],
+    weather: "Sunny", temperature: "28°C"
+  },
 
-  // Group L
-  { id: 67, homeTeam: "England", awayTeam: "Croatia", homeScore: null, awayScore: null, group: "L", day: "Monday", date: "2026-06-18", time: "04:00", status: "upcoming" },
-  { id: 68, homeTeam: "Ghana", awayTeam: "Panama", homeScore: null, awayScore: null, group: "L", day: "Monday", date: "2026-06-18", time: "07:00", status: "upcoming" },
-  { id: 69, homeTeam: "England", awayTeam: "Ghana", homeScore: null, awayScore: null, group: "L", day: "Wednesday", date: "2026-06-24", time: "04:00", status: "upcoming" },
-  { id: 70, homeTeam: "Panama", awayTeam: "Croatia", homeScore: null, awayScore: null, group: "L", day: "Wednesday", date: "2026-06-24", time: "07:00", status: "upcoming" },
-  { id: 71, homeTeam: "Panama", awayTeam: "England", homeScore: null, awayScore: null, group: "L", day: "Sunday", date: "2026-06-28", time: "05:00", status: "upcoming" },
-  { id: 72, homeTeam: "Croatia", awayTeam: "Ghana", homeScore: null, awayScore: null, group: "L", day: "Sunday", date: "2026-06-28", time: "05:00", status: "upcoming" },
+  // Group K - FINISHED MATCH (Portugal vs Denmark)
+  { 
+    id: 11, homeTeam: "Portugal", awayTeam: "Denmark", homeScore: 2, awayScore: 0, 
+    group: "K", day: "Thursday", date: "2026-06-18", time: "01:00", status: "finished",
+    stadium: "Estadio da Luz", city: "Lisbon", referee: "Szymon Marciniak (Poland)",
+    homeLineup: ["Costa", "Cancelo", "Dias", "Antonio Silva", "Mendes", "Fernandes", "Palhinha", "Bernardo", "Felix", "Ronaldo", "Leao"],
+    awayLineup: ["Schmeichel", "Andersen", "Kjaer", "Christensen", "Maehle", "Hojbjerg", "Eriksen", "Delaney", "Skov Olsen", "Hojlund", "Lindstrom"],
+    weather: "Clear", temperature: "22°C"
+  },
+
+  // Group L - FINISHED MATCH (Example with score)
+  { 
+    id: 12, homeTeam: "England", awayTeam: "Croatia", homeScore: 1, awayScore: 1, 
+    group: "L", day: "Monday", date: "2026-06-18", time: "04:00", status: "finished",
+    stadium: "Wembley Stadium", city: "London", referee: "Jesus Valenzuela (Venezuela)",
+    homeLineup: ["Pickford", "Walker", "Stones", "Maguire", "Shaw", "Rice", "Bellingham", "Saka", "Foden", "Rashford", "Kane"],
+    awayLineup: ["Livakovic", "Juranovic", "Lovren", "Gvardiol", "Sosa", "Modric", "Brozovic", "Kovacic", "Vlasic", "Perisic", "Kramaric"],
+    weather: "Light rain", temperature: "15°C"
+  },
 ];
