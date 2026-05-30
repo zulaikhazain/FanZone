@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import MatchList from "./components/MatchList";
 import GroupStandings from "./components/GroupStandings";
 import Predictions from "./components/Predictions";

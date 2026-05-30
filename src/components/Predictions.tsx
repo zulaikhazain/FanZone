@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { matches, type Match } from "../data/matches";
+import { matches } from "../data/matches";
 
 interface Prediction {
   matchId: number;
