@@ -56,9 +56,9 @@ export const matches: Match[] = [
   { id: 31, homeTeam: "Netherlands", awayTeam: "Japan", homeScore: null, awayScore: null, group: "F", day: "Monday", date: "2026-06-15", time: "04:00", status: "upcoming" },
   { id: 32, homeTeam: "Sweden", awayTeam: "Tunisia", homeScore: null, awayScore: null, group: "F", day: "Monday", date: "2026-06-15", time: "10:00", status: "upcoming" },
   { id: 33, homeTeam: "Netherlands", awayTeam: "Sweden", homeScore: null, awayScore: null, group: "F", day: "Sunday", date: "2026-06-21", time: "04:00", status: "upcoming" },
-  { id: 34, homeTeam: "Tunisia", awayTeam: "Japan", homeScore: null, awayScore: null, group: "F", day: "Sunday", date: "2026-06-21", time: "12:00", status: "upcoming" }
-  { id: 35, homeTeam: "Tunisia", awayTeam: "Netherlands", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" }
-  { id: 36, homeTeam: "Japan", awayTeam: "Sweden", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" }
+  { id: 34, homeTeam: "Tunisia", awayTeam: "Japan", homeScore: null, awayScore: null, group: "F", day: "Sunday", date: "2026-06-21", time: "12:00", status: "upcoming" },
+  { id: 35, homeTeam: "Tunisia", awayTeam: "Netherlands", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" },
+  { id: 36, homeTeam: "Japan", awayTeam: "Sweden", homeScore: null, awayScore: null, group: "F", day: "Friday", date: "2026-06-26", time: "07:00", status: "upcoming" },
 
   // Group G
   { id: 37, homeTeam: "Belgium", awayTeam: "Egypt", homeScore: null, awayScore: null, group: "G", day: "Tuesday", date: "2026-06-16", time: "03:00", status: "upcoming" },
@@ -98,7 +98,7 @@ export const matches: Match[] = [
   { id: 63, homeTeam: "Portugal", awayTeam: "Uzbekistan", homeScore: null, awayScore: null, group: "K", day: "Wednesday", date: "2026-06-24", time: "01:00", status: "upcoming" },
   { id: 64, homeTeam: "Colombia", awayTeam: "DR Congo", homeScore: null, awayScore: null, group: "K", day: "Wednesday", date: "2026-06-24", time: "10:00", status: "upcoming" },
   { id: 65, homeTeam: "Colombia", awayTeam: "Portugal", homeScore: null, awayScore: null, group: "K", day: "Sunday", date: "2026-06-28", time: "07:30", status: "upcoming" },
-  { id: 66, homeTeam: "DR Congo", awayTeam: "Uzbkeistan", homeScore: null, awayScore: null, group: "K", day: "Sunday", date: "2026-06-28", time: "07:30", status: "upcoming" },
+  { id: 66, homeTeam: "DR Congo", awayTeam: "Uzbekistan", homeScore: null, awayScore: null, group: "K", day: "Sunday", date: "2026-06-28", time: "07:30", status: "upcoming" },
 
   // Group L
   { id: 67, homeTeam: "England", awayTeam: "Croatia", homeScore: null, awayScore: null, group: "L", day: "Monday", date: "2026-06-18", time: "04:00", status: "upcoming" },

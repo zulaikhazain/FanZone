@@ -1,4 +1,5 @@
-import { matches, Match } from "../data/matches";
+import { matches } from "../data/matches";
+import type { Match } from "../data/matches";
 
 function MatchList() {
   const upcomingMatches = matches.filter(m => m.status === "upcoming");
