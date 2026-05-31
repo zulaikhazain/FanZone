@@ -105,7 +105,7 @@ const saveAllUsers = (users: User[]) => {
   localStorage.setItem("fanzone_all_users", JSON.stringify(users));
 };
 
-// Flag image URLs - USING CDN THAT WORKS
+// Flag image URLs
 const getFlagUrl = (country: string): string => {
   const countryCodes: Record<string, string> = {
     "Portugal": "pt",
@@ -194,7 +194,7 @@ function Predictions() {
   const drawVotesPortugal = voteStats[11]?.draw || 0;
   const totalVotesPortugal = voteStats[11]?.total || 0;
 
-  // Get vote counts for England vs Croatia (match id: 12) - Result: 1-1 DRAW
+  // Get vote counts for England vs Croatia (match id: 12)
   const englandVotes = voteStats[12]?.home || 0;
   const croatiaVotes = voteStats[12]?.away || 0;
   const drawVotesEngland = voteStats[12]?.draw || 0;
@@ -307,7 +307,7 @@ function Predictions() {
 
   return (
     <div style={{ padding: "20px" }}>
-      {/* Name Modal */}
+      {/* NAME MODAL - FIXED POPUP */}
       {showNameModal && (
         <div style={{
           position: "fixed",
@@ -319,16 +319,18 @@ function Predictions() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          zIndex: 2000
+          zIndex: 9999
         }}>
           <div style={{
             backgroundColor: "white",
             borderRadius: "12px",
             padding: "24px",
             maxWidth: "400px",
-            width: "90%"
+            width: "90%",
+            boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+            textAlign: "center"
           }}>
-            <h3 style={{ marginBottom: "16px" }}>Enter Your Name</h3>
+            <h3 style={{ marginBottom: "16px", fontSize: "20px", fontWeight: "bold" }}>Enter Your Name</h3>
             <input
               type="text"
               placeholder="Your name..."
@@ -340,9 +342,11 @@ function Predictions() {
                 fontSize: "16px",
                 border: "2px solid #d97706",
                 borderRadius: "8px",
-                marginBottom: "16px"
+                marginBottom: "16px",
+                boxSizing: "border-box"
               }}
               onKeyPress={(e) => e.key === "Enter" && updateUserName()}
+              autoFocus
             />
             <button
               onClick={updateUserName}
