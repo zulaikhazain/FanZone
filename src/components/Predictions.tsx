@@ -307,7 +307,7 @@ function Predictions() {
 
   return (
     <div style={{ padding: "20px" }}>
-      {/* NAME MODAL - FIXED POPUP */}
+      {/* Name Modal */}
       {showNameModal && (
         <div style={{
           position: "fixed",

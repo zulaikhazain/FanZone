@@ -19,7 +19,7 @@ const groupColors: Record<string, { bg: string; border: string; text: string }> 
   "L": { bg: "#fef9c3", border: "#ca8a04", text: "#713f12" },  // Light Yellow
 };
 
-// Flag image URLs using CDN (reliable)
+// Flag image URLs using CDN
 const getFlagUrl = (country: string): string => {
   const countryCodes: Record<string, string> = {
     "Mexico": "mx",
@@ -78,7 +78,7 @@ const getFlagUrl = (country: string): string => {
   return `https://flagicons.lipis.dev/flags/4x3/${code}.svg`;
 };
 
-// Function to sort matches by date (earliest first)
+// Sort matches by date (earliest first)
 function sortByDate(matchArray: Match[]): Match[] {
   return [...matchArray].sort((a, b) => {
     const dateTimeA = `${a.date} ${a.time}`;
@@ -87,7 +87,7 @@ function sortByDate(matchArray: Match[]): Match[] {
   });
 }
 
-// Function to group matches by date
+// Group matches by date
 function groupByDate(matchArray: Match[]): { [date: string]: Match[] } {
   const grouped: { [date: string]: Match[] } = {};
   matchArray.forEach(match => {
@@ -99,7 +99,7 @@ function groupByDate(matchArray: Match[]): { [date: string]: Match[] } {
   return grouped;
 }
 
-// Function to format date header
+// Format date header
 function formatDateHeader(dateStr: string) {
   const date = new Date(dateStr);
   const formattedDate = date.toLocaleDateString('en-US', { 
@@ -127,7 +127,7 @@ function MatchList() {
 
   return (
     <div style={{ padding: "20px" }}>
-      {/* TIME ZONE NOTE - TOP */}
+      {/* Time Zone Note - Top */}
       <div style={{
         backgroundColor: "#f3f4f6",
         padding: "8px 12px",
@@ -201,7 +201,7 @@ function MatchList() {
         <p style={{ color: "#000000" }}>No finished matches yet</p>
       )}
 
-      {/* TIME ZONE NOTE - FOOTER */}
+      {/* Time Zone Note - Footer */}
       <div style={{
         marginTop: "32px",
         paddingTop: "16px",

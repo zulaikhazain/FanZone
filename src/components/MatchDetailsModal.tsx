@@ -9,7 +9,7 @@ interface MatchDetailsModalProps {
 function MatchDetailsModal({ match, onClose }: MatchDetailsModalProps) {
   if (!match) return null;
 
-  // Sample goal scorers data (in a real app, this would come from your matches data)
+  // Sample goal scorers data 
   const getGoalScorers = () => {
     if (match.id === 11) { // Portugal vs DR Congo (2-0)
       return {
@@ -34,13 +34,12 @@ function MatchDetailsModal({ match, onClose }: MatchDetailsModalProps) {
 
   // Get highlight video URL for finished matches
   const getHighlightUrl = () => {
-    // These are sample YouTube highlight links
-    // In a real app, you would store these in your matches data
+
     if (match.id === 11) {
-      return "https://www.youtube.com/embed/thZaul9APqI?si=7M_1LJhYGmr36uEm"; // Replace with actual highlights
+      return "https://www.youtube.com/embed/thZaul9APqI?si=7M_1LJhYGmr36uEm"; 
     }
     if (match.id === 12) {
-      return "https://www.youtube.com/embed/o-uDViF7qkk?si=m06DfiyK73SV9jCY"; // Replace with actual highlights
+      return "https://www.youtube.com/embed/o-uDViF7qkk?si=m06DfiyK73SV9jCY";
     }
     return null;
   };
@@ -112,7 +111,7 @@ function MatchDetailsModal({ match, onClose }: MatchDetailsModalProps) {
           
           {match.status === "finished" && match.homeScore !== null && (
             <div>
-              {/* FINAL SCORE */}
+              {/* Final Score */}
               <p style={{ 
                 fontSize: "48px", 
                 fontWeight: "bold", 
@@ -123,7 +122,7 @@ function MatchDetailsModal({ match, onClose }: MatchDetailsModalProps) {
                 {match.homeScore} - {match.awayScore}
               </p>
               
-              {/* Goal Scorers Section - Below the score */}
+              {/* Goal Scorers Section */}
               {(scorers.home.length > 0 || scorers.away.length > 0) && (
                 <div style={{ 
                   marginTop: "8px", 

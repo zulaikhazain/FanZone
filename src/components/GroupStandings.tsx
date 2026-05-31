@@ -186,7 +186,7 @@ function GroupStandings() {
         🏆 Group standings updated based on finished matches • MYT
       </div>
 
-      {/* DROPDOWN TEAM SELECTOR */}
+      {/* Dropdown team selector */}
       <div style={{ marginBottom: "20px" }}>
         <select
           onChange={(e) => {
@@ -326,7 +326,7 @@ function GroupStandings() {
         ))}
       </div>
 
-      {/* Standings Table - WITH IMAGE FLAGS */}
+      {/* Standings Table */}
       {standings[selectedGroup] && (
         <div style={{ backgroundColor: "white", borderRadius: "12px", overflow: "auto", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "14px", minWidth: "600px" }}>
